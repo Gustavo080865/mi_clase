@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos del Curso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>Material de Estudio</h1>
+        <p>Selecciona un tema para visualizar el PDF y descargarlo.</p>
+    </header>
+
+    <div class="container">
+        <!-- Lista de Temas -->
+        <nav class="sidebar">
+            <h3>Temas</h3>
+            <ul>
+                <li><button onclick="verPDF('pdfs/tema1.pdf', 'Tema 1: Introducción')">Tema 1: Introducción</button></li>
+                <li><button onclick="verPDF('pdfs/tema2.pdf', 'Tema 2: Historia')">Tema 2: Historia</button></li>
+                <li><button onclick="verPDF('pdfs/tema3.pdf', 'Tema 3: Avanzado')">Tema 3: Avanzado</button></li>
+            </ul>
+        </nav>
+
+        <!-- Visor de PDF -->
+        <main class="viewer-section">
+            <h2 id="pdf-title">Selecciona un archivo</h2>
+            <div id="pdf-container">
+                <p id="placeholder">Haz clic en un tema de la izquierda para comenzar.</p>
+                <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+            </div>
+            <div class="actions">
+                <a id="download-btn" href="#" download style="display: none;">Descargar PDF</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
